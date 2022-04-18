@@ -1,0 +1,20 @@
+/*   Sitewide  */
+
+.navbar-brand {
+	min-height: auto;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: lighter;
+}
+.navbar navbar-expand-lg navbar-light bg-light{
+	color:whitesmoke
+}
+
+
+.navbar-nav>li>a, .navbar-dark .navbar-nav .nav-link {
+	color: white;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+

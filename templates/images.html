@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block body %}
+
+<h1>All images!</h1>
+
+<ul>
+  {% for image in images %}
+  {{ image['image_id'] }}
+  
+  <li><img src="{{ image['url'] }} " width="450" height="420">
+  {{ image['lastModified'] }} 
+  <form action="/images" method="POST">
+  <input type="text" name="image_id" value="{{ image['image_id'] }}" hidden>
+  <input type="text" name="url" value="{{ image['url'] }}" hidden>
+  <input type="text" name="lastModified" value="{{ image['lastModified'] }}" hidden>
+
+    <select name="result" id="lang-select">
+      <option value="unclassified">unclassified</option>
+      <option value="foaming">Foaming</option>
+      <option value="not_foaming">Not-foaming</option>
+      
+    </select>
+    <button id="foaming" type="submit">submit</button>
+  </form>
+  
+  
+  </li>
+  {% endfor %}
+{% endblock %}
+

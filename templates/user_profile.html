@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}User_profile{% endblock %}
+
+{% block body %}
+<h3>User Profile</h3>
+
+<div class="row">
+    <div class="column left" style="background-color:rgb(252, 250, 250);">
+      <h2>Foaming</h2>
+    <div id="images_foaming"></div>
+    <script src='/static/user_profile.js'></script>
+    </div>
+    
+    <div class="column right" style="background-color:rgb(252, 250, 250);">
+      <h2>Non-Foaming</2>
+    <div id="images_not_foaming"></div>
+    <script src='/static/user_profile.js'></script>
+    </div>
+  
+</div>
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      padding: 10px;
+      height: 300px; 
+    }
+    
+    .left {
+      width: 50%;
+    }
+    
+    .right {
+      width: 50%;
+    }
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    </style>
+
+<p>
+
+ <!-- <div id="images_foaming"></div>
+<script src='/static/user_profile.js'></script>
+
+ </div> -->
+
+
+</p>
+{% endblock %}
